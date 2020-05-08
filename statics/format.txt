@@ -2,3 +2,4 @@ Message : {message}
 
 
 Email of sender : {email}
+Name : {name}
