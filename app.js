@@ -8,12 +8,15 @@ const json = bodyParser.json();
 
 let corsConfig = {
     origin: (origin, callback) => {
-        let list = ['http://localhost:4200', 'https://rishabhmalhotra.web.app'];
+        let list = ['http://localhost:4200', 
+        'https://rishabhmalhotra.web.app', 
+        'https://renny-mittal.web.app/intro', 
+        'https://renny-mittal.web.app/what', 
+        'https://renny-mittal.web.app/work'];
         //condition to check if url is present in allowed list or nor
-        if(list.indexOf(origin) !== -1) {
+        if (list.indexOf(origin) !== -1) {
             callback(null, true);
-        }
-        else{
+        } else {
             callback(new Error('Not allowed by CORS'));
         }
     }
